@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/Outfit-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/Outfit-Regular.ttf");
+    font-weight: 400;
+}
+
+:root {
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+
+    --ff-base: "Outfit", sans-serif;
+}
+
+@layer reset {
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--ff-base);
+        font-size: 15px;
+        line-height: 1.5;
+        background-color: var(--slate-300);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    h3,
+    p {
+        margin-block: 0;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+main {
+    display: grid;
+    place-content: center;
+    padding: 1.75rem;
+}
+
+.qr-code-card {
+    max-width: 320px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 16px 16px 24px;
+}
+
+.qr-code-card > img {
+    border-radius: 10px;
+}
+
+.qr-code-card__details {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    line-height: 32px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
