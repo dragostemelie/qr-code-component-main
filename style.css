@@ -80,6 +80,7 @@ main {
     display: grid;
     gap: 16px;
     padding: 16px;
+    text-align: center;
 }
 
 .attribution {
